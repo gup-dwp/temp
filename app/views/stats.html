@@ -1,0 +1,56 @@
+{% extends "layouts/layout_dwp_dashboard.html" %}
+
+{% block page_title %}
+  PIP Google Analytics Dasboard
+{% endblock %}
+
+{% block content %}
+  <main id="content" role="main">
+      <h1 class="heading-xlarge">Apply for PIP  </h1>
+      <p class="dashboard-date">Release 2.1</p>
+
+
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">PIP1 Completions</h2>
+        <div id="stat-1" class="stats">
+        </div>
+      </div>
+
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">PIP2 Completions</h2>
+        <div id="stat-2" class="stats">
+        </div>
+      </div>
+
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">Sessions to Complete</h2>
+        <div id="stat-3" class="stats">
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">PIP1 time to complete</h2>
+        <div id="stat-4" class="stats">
+        </div>
+      </div>
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">PIP2 time to complete</h2>
+        <div id="stat-5" class="stats">
+        </div>
+      </div>
+      <div class="column-one-third">
+        <h2 class="heading-medium heading-tile">Total time to complete</h2>
+        <div id="stat-6" class="stats">
+        </div>
+      </div>
+    </div>
+
+  </main>
+{% endblock %}
+{% block page_scripts %}
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- https://developers.google.com/chart/interactive/faq -->
+  <script src="/public/javascripts/dashboard-stats.js"></script>
+{% endblock %}

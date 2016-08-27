@@ -1,0 +1,12 @@
+.markdown {
+  margin-bottom: 20px;
+}
+
+.markdown *:last-child {
+  margin-bottom: 0;
+}
+
+.markdown pre code {
+  display: block;
+  padding: 10px;
+}
