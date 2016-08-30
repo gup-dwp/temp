@@ -1,7 +1,7 @@
 $(function(){
 
 
-    var JSONURL2 = '/test.php';
+    var JSONURL2 = './app/views/test.php';
     $.ajax({
                 url: JSONURL2,
                 contentType: "application/json-in-script; charset=utf-8",
