@@ -1,0 +1,26 @@
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- https://developers.google.com/chart/interactive/faq -->
+
+ <script>
+ google.charts.load('visualization','1', {packages: ['corechart','line']});
+//  google.charts.setOnLoadCallback(runQueries);
+ function handleData(data) {
+   var test = data.replace('/*O_o*/','')
+   $('#test').append(test)
+ }
+ $.ajax({
+                url: 'test.php',
+
+                // Whether this is a POST or GET request
+    type: "GET",
+    success:function(data) {
+      handleData(data);
+    }
+
+    // The type of data we expect back
+  //  dataType : "json",
+
+})
+ </script>
+<p id="test"></p>
