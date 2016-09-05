@@ -6,8 +6,8 @@
  google.charts.load('visualization','1', {packages: ['corechart','line']});
 //  google.charts.setOnLoadCallback(runQueries);
  function handleData(data) {
-   console.log('--');
-   console.log(data);
+   //console.log('--');
+   //console.log(data);
    var test = data.replace('/*O_o*/','')
    $('#test').append(test)
  }
@@ -18,7 +18,7 @@
     type: "GET",
     //dataType: "jsonp",
     success:function(data) {
-      console.log('++');
+      //console.log('++');
       handleData(data);
     }
 
