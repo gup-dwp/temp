@@ -6,6 +6,8 @@
  google.charts.load('visualization','1', {packages: ['corechart','line']});
 //  google.charts.setOnLoadCallback(runQueries);
  function handleData(data) {
+   console.log('--');
+   console.log(data);
    var test = data.replace('/*O_o*/','')
    $('#test').append(test)
  }
@@ -14,7 +16,9 @@
 
                 // Whether this is a POST or GET request
     type: "GET",
+
     success:function(data) {
+      console.log('++');
       handleData(data);
     }
 
