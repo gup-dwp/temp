@@ -12,11 +12,11 @@
    $('#test').append(test)
  }
  $.ajax({
-                url: 'test.php',
+                url: 'https://test-pip.herokuapp.com/archive/test.php',
 
                 // Whether this is a POST or GET request
     type: "GET",
-
+    //dataType: "jsonp",
     success:function(data) {
       console.log('++');
       handleData(data);
