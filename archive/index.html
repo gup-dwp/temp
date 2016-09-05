@@ -5,21 +5,20 @@
  <script>
  google.charts.load('visualization','1', {packages: ['corechart','line']});
 //  google.charts.setOnLoadCallback(runQueries);
- function handleData(data) {
+ function callback(data) {
    //console.log('--');
    //console.log(data);
-   var test = data.replace('/*O_o*/','')
-   $('#test').append(test)
+  // var test = data.replace('/*O_o*/','')
+   $('#test').append(data.feed.entry[12].id.$t)
  }
  $.ajax({
-                url: 'https://test-pip.herokuapp.com/archive/test.php',
-
+                url: 'test.php',
+                 contentType: "application/json-in-script; charset=utf-8",
+dataType: "jsonp",
                 // Whether this is a POST or GET request
-    type: "GET",
-    //dataType: "jsonp",
     success:function(data) {
       //console.log('++');
-      handleData(data);
+      callback(data);
     }
 
     // The type of data we expect back
